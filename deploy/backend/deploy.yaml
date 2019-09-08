@@ -2,13 +2,13 @@
 apiVersion: apps/v1beta1
 kind: Deployment
 metadata:
-  name: myappfe-deployment
+  name: myappbe-deployment
   namespace:  mycart
 spec:
   selector:
     matchLabels:
-      app: myappfe
-      tier:  frontend
+      app: myappbe
+      tier:  backend
   replicas: 2
   minReadySeconds:  5
   progressDeadlineSeconds:  300
@@ -20,12 +20,12 @@ spec:
   template: 
     metadata:
       labels: 
-        app: myappfe
-        tier:  frontend
+        app: myappbe
+        tier:  backend
     spec:
       containers:
-      - name: myappfe
-        image: khalindar/mydockerappfe0903:2.0
+      - name: myappbe
+        image: khalindar/mydockerappbe0903:2.0
         imagePullPolicy:  Always  
         ports:
         - containerPort: 80

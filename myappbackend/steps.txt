@@ -1,0 +1,10 @@
+CentOS as my run time and 7 image
+update all current packages
+yum -y update
+install apache inside 
+yum -y install httpd
+apache willb e running on port 80:wq
+
+Copy the code to document root of apache /var/www/html
+code/* /var/www/html
+

@@ -2,15 +2,13 @@
 kind: Service
 apiVersion: v1
 metadata:
-  name: frontendapi
-  namespace:  mycart
+  name: testbackendapi
+  namespace:  test
 spec:
   selector:
-    app: myappfe
-    tier:  frontend
+    app: mytestappbe
+    tier:  test
   ports:
   - protocol: "TCP"
     port: 80
     targetPort: 80
-  type: LoadBalancer
-
