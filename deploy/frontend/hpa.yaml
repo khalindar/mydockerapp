@@ -3,11 +3,12 @@ apiVersion: autoscaling/v2beta1
 kind: HorizontalPodAutoscaler
 metadata:
   name: nginx-deployment-hpa
+  namespace: mycart
 spec:
   scaleTargetRef:
     apiVersion: apps/v1
     kind: Deployment
-    name: nginx-deployment
+    name: myappfe-deployment
   minReplicas: 2
   maxReplicas: 10
   metrics:
